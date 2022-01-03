@@ -31,4 +31,16 @@ body{
   padding: 2rem 0;
   background: #979797;
 }
+
+@media screen and (min-width: 1600px) {
+  html {
+    font-size: 120%;
+  }
+}
+
+@media screen and (max-width: 900px){
+    html {
+      font-size: 90%;
+    }
+  }
 </style>

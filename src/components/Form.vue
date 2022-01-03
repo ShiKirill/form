@@ -299,8 +299,8 @@ import Modal from './Modal';
 
 export default {
   name: 'HelloWorld',
-  components:{  
-    Modal
+  components: {
+    Modal,
   },
   data() {
     return {
@@ -351,7 +351,7 @@ export default {
     },
     issuedDate: {
       required,
-    }
+    },
   },
   methods: {
     onSubmit(e) {
@@ -362,7 +362,7 @@ export default {
         e.target.reset();
       }
     },
-    clearData(){
+    clearData() {
       this.$v.$reset();
       this.name = '';
       this.surname = '';
@@ -573,7 +573,7 @@ export default {
         border-color: rgb(66, 138, 57);
       }
     }
-    
+
     .info-block__chevron {
       position: absolute;
       z-index: 1;
@@ -646,7 +646,7 @@ export default {
     font-size: 1rem;
     color: #fff;
     background: #1ab188;
-    width: 30%;
+    width: 40%;
     height: 2.5rem;
     border: 1px solid #90979c;
     border-radius: 1rem;
@@ -678,6 +678,38 @@ export default {
     font-size: 0.75rem;
     position: absolute;
     bottom: -1rem;
+  }
+
+  @media screen and (max-width: 900px) {
+    width: 70%;
+
+    .info-block {
+      .info-block__chevron {
+        right: 23%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 95%;
+
+    .form__btn {
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .info-block{
+      flex-direction: column;
+
+      .info-block__item{
+        width: 90%;
+      }
+    }
+
+    .form__btn {
+      width: 70%;
+    }
   }
 }
 </style>
