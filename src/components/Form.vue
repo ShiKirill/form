@@ -104,6 +104,7 @@
           >
           <select
             class="info-block__field info-block__field_select"
+            :class="{ 'block-error': $v.clientGroupe.$error }"
             @change="setClientGroupe"
           >
             <option hidden disabled selected value=""></option>
@@ -298,7 +299,7 @@ import { required } from 'vuelidate/lib/validators';
 import Modal from './Modal';
 
 export default {
-  name: 'HelloWorld',
+  name: 'Form',
   components: {
     Modal,
   },
@@ -473,12 +474,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-/*
-#1ab188 - button
-#90979c - placeHolderText/borders
-#435159 - notactive
-#ffffff - textColor
-*/
 
 .main {
   width: 100%;
@@ -503,10 +498,6 @@ export default {
     flex-wrap: wrap;
     margin-bottom: 2rem;
     width: 100%;
-
-    // &:last-child {
-    //   margin: 0;
-    // }
 
     .info-block__title {
       margin-top: 0;
